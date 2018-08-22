@@ -1,7 +1,10 @@
 spring:
   datasource:
+    # 数据库连接地址
     url: jdbc:postgresql://172.16.36.134:5432/zhangdi_test
+    # 数据库连接驱动
     driver-class-name: org.postgresql.Driver
+    # 数据库用户名
     username: bangcle_pg
 
 mybatis:
@@ -11,6 +14,7 @@ mybatis:
 
 logging:
   level:
+    # 设置com.zhangblue.sample.cache.mapper包下的日志打印级别为debug
     com.zhangblue.sample.cache.mapper: debug
 
 
