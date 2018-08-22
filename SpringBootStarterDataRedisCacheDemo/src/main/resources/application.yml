@@ -1,0 +1,21 @@
+spring:
+  redis:
+    host: 172.16.36.134
+    port: 6379
+    database: 1
+  datasource:
+    url: jdbc:postgresql://172.16.36.134:5432/zhangdi_test
+    driver-class-name: org.postgresql.Driver
+    username: bangcle_pg
+
+mybatis:
+  configuration:
+    # 开启驼峰命名法，否则属性dId与数据库中的d_id无法匹配
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.zhangblue.sample.cache.mapper: debug
+debug: true
+
+
