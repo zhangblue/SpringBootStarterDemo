@@ -72,7 +72,7 @@ logging:
 - `@CacheConfig(cacheNames = {"emp"},key = "#id")` //缓存的公共配置
   - `cacheNames` : 缓存在哪个cache里
   - `key`：表示缓存的key。
-  - `keyGenerator`：表示使用自定义的key生成策略函数的名称。需要自定义`KeyGenerator`类，并放入ioc容器。
+  - `keyGenerator`：表示使用自定义的key生成策略函数的名称。需要自定义`KeyGenerator`类，并放入ioc容器。  
   - `condition`：表示调用方法前，只对满足某个条件的数据做缓存。
   - `unless`：表示方法返回值中，满足某个条件的数据不会被缓存。
 - `@Cacheable(key = "#id")` 表示查询缓存。当缓存中没有时会执行方法，并将方法的返回值缓存在cache中。缓存中如果已经存在，则直接获取缓存中的内容，不再执行方法。
@@ -80,6 +80,31 @@ logging:
 - `@CacheEvict`：清除缓存
  - `@beforeInvocation`：表示是在调用方法前清除缓存，还是方法执行后才清除缓存。
 - `@Caching`：定义复杂的缓存机制。可以自定义组合缓存。 
+
+### 4. 重点代码
+
+**自定义cache key生成策略**
+
+``` java
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyCacheConfig {
+  @Bean("myKeyGenerator") //key生成策略名称，在 keyGenerator 参数中使用
+  public KeyGenerator getKeyGenerator() {
+    return new KeyGenerator() {
+      @Override
+      public Object generate(Object target, Method method, Object... params) {
+        return method.getName() + "[" + Arrays.asList(params).toString() + "]";
+      }
+    };
+  }
+}
+```
 
 
 
