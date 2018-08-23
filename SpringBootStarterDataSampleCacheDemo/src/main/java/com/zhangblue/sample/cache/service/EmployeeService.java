@@ -32,7 +32,7 @@ public class EmployeeService {
     return employee;
   }
 
-  @CacheEvict(cacheNames = {"emp"}, key = "#id", beforeInvocation = false)
+  @CacheEvict(cacheNames = {"emp"}, key = "#id", beforeInvocation = false,allEntries = )
   public String deleteEmp(Integer id) {
     System.out.println("删除" + id + "号员工");
     //employeeMapper.deleteEmyById(id);
