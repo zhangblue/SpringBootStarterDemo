@@ -76,9 +76,9 @@ logging:
   - `condition`：表示调用方法前，只对满足某个条件的数据做缓存。
   - `unless`：表示方法返回值中，满足某个条件的数据不会被缓存。
 - `@Cacheable(key = "#id")` 表示查询缓存。当缓存中没有时会执行方法，并将方法的返回值缓存在cache中。缓存中如果已经存在，则直接获取缓存中的内容，不再执行方法。
-- `@CachePut(key = "#result.id")` : 更新缓存。方法肯定会被执行，执行后的结果更新cache。`key = "#result.id"`表示使用返回值对象中的id字段作为缓存的key
+- `@CachePut(key = "#result.id")` : 更新缓存。方法肯定会被执行，执行后的结果更新cache。`key="#result.id"`表示使用返回值对象中的id字段作为缓存的key
 - `@CacheEvict`：清除缓存
- - `beforeInvocation`：表示是在调用方法前清除缓存，还是方法执行后才清除缓存。
+ - `@beforeInvocation`：表示是在调用方法前清除缓存，还是方法执行后才清除缓存。
 - `@Caching`：定义复杂的缓存机制。可以自定义组合缓存。 
 
 
