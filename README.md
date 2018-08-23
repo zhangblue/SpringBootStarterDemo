@@ -16,7 +16,7 @@
 # 包含内容
 - SpringBootJpa操作 `SpringBootStarterDataJpaDemo`
 - SpringBootRedis操作 `SpringBootStarterDataRedisDemo`
-- SpringBootSampleCache操作 `SpringBootStarterDataSampleCacheDemo`
+- SpringBootSampleCache操作 `SpringBootStarterDataSimpleCacheDemo`
 - SpringBootRedisCache操作 `SpringBootStarterDataRedisCacheDemo`
 
 其他模块内容正在完善中...
