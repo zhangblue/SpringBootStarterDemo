@@ -1,7 +1,7 @@
-package com.zhangblue.sample.cache.controller;
+package com.zhangblue.simple.cache.controller;
 
-import com.zhangblue.sample.cache.bean.Employee;
-import com.zhangblue.sample.cache.service.EmployeeService;
+import com.zhangblue.simple.cache.bean.Employee;
+import com.zhangblue.simple.cache.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-# SpringBoot SampleCache 
+# SpringBoot SimpleCache 
 SpringBoot cache缓存机制，默认使用的Sample
 
 

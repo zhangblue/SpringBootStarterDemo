@@ -39,8 +39,7 @@ public class MyRedisConfig {
   /**
    * CacheManagerCustomizers 可以来定制缓存的一些规则
    */
-  @Bean
-
+  @Bean(name = "employeeCacheManager")
   public RedisCacheManager employeeCacheManager(RedisTemplate<Object, Employee> employeeRedisTemplate) {
     RedisCacheManager cacheManager = new RedisCacheManager(employeeRedisTemplate);
     cacheManager.setUsePrefix(true);//使用前缀，会默认将CacheName作为key的前缀
@@ -50,9 +49,9 @@ public class MyRedisConfig {
   /**
    * CacheManagerCustomizers 可以来定制缓存的一些规则
    */
-  @Bean
-  public RedisCacheManager deptCacheManager(RedisTemplate<Object, Department> deptTemplate) {
-    RedisCacheManager cacheManager = new RedisCacheManager(deptTemplate);
+  @Bean(name = "deptCacheManager")
+  public RedisCacheManager deptCacheManager(RedisTemplate<Object, Department> departmentRedisTemplate) {
+    RedisCacheManager cacheManager = new RedisCacheManager(departmentRedisTemplate);
     cacheManager.setUsePrefix(true);//使用前缀，会默认将CacheName作为key的前缀
     return cacheManager;
   }

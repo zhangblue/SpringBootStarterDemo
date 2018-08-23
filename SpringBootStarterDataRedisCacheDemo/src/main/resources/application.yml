@@ -15,7 +15,7 @@ mybatis:
 
 logging:
   level:
-    com.zhangblue.sample.cache.mapper: debug
+    com.zhangblue.redis.cache.mapper: debug
 debug: true
 
 

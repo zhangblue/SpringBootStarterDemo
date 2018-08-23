@@ -1,7 +1,7 @@
-package com.zhangblue.sample.cache.service;
+package com.zhangblue.simple.cache.service;
 
-import com.zhangblue.sample.cache.bean.Employee;
-import com.zhangblue.sample.cache.mapper.EmployeeMapper;
+import com.zhangblue.simple.cache.bean.Employee;
+import com.zhangblue.simple.cache.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -32,7 +32,7 @@ public class EmployeeService {
     return employee;
   }
 
-  @CacheEvict(cacheNames = {"emp"}, key = "#id", beforeInvocation = false,allEntries = )
+  @CacheEvict(cacheNames = {"emp"}, key = "#id", beforeInvocation = false)
   public String deleteEmp(Integer id) {
     System.out.println("删除" + id + "号员工");
     //employeeMapper.deleteEmyById(id);

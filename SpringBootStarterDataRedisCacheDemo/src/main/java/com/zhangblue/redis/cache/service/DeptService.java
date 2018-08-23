@@ -16,10 +16,6 @@ public class DeptService {
   @Autowired
   DepartmentMapper departmentMapper;
 
-  @Qualifier(value = "deptCacheManager")//明确规定使用名为 deptCacheManager CacheManager
-  @Autowired
-  RedisCacheManager departmentCacheManager;
-
 
   /**
    * 使用标签的形式做缓存。使用此种方式，这个方法不会被重复调用。
@@ -31,14 +27,5 @@ public class DeptService {
     return department;
   }
 
-  /**
-   * 使用缓存管理器得到缓存，进行api调用
-   * 在代码中进行缓存。这样只是对内容进行了缓存，方法还是会被重复调用
-   */
-  public Department getDeptById2(Integer id) {
-    System.out.println("查询" + id + "号部门");
-    Department department = departmentMapper.getDepartmenById(id);
-    departmentCacheManager.getCache("dept").put(department.getId(), department);
-    return department;
-  }
+
 }

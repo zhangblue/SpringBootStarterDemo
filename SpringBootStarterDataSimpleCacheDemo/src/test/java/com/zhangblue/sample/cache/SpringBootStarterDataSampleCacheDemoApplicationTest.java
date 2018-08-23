@@ -1,7 +1,8 @@
 package com.zhangblue.sample.cache;
 
-import com.zhangblue.sample.cache.bean.Employee;
-import com.zhangblue.sample.cache.mapper.EmployeeMapper;
+import com.zhangblue.simple.cache.SpringBootStarterDataSimpleCacheDemoApplication;
+import com.zhangblue.simple.cache.bean.Employee;
+import com.zhangblue.simple.cache.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootStarterDataSampleCacheDemoApplication.class)
+@SpringBootTest(classes = SpringBootStarterDataSimpleCacheDemoApplication.class)
 public class SpringBootStarterDataSampleCacheDemoApplicationTest {
 
   @Autowired

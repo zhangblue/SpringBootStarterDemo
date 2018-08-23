@@ -1,4 +1,4 @@
-package com.zhangblue.sample.cache.config;
+package com.zhangblue.simple.cache.config;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;

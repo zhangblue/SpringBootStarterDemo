@@ -1,4 +1,4 @@
-package com.zhangblue.sample.cache.bean;
+package com.zhangblue.simple.cache.bean;
 
 public class Department {
   private Integer id;

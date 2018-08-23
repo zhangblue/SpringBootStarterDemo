@@ -20,9 +20,5 @@ public class DeptContruller {
     return department;
   }
 
-  @GetMapping("/dept2/{id}")
-  public Department getEmployee2(@PathVariable("id") Integer id) {
-    Department department = deptService.getDeptById2(id);
-    return department;
-  }
+
 }

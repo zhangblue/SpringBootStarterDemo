@@ -14,7 +14,7 @@ mybatis:
 
 logging:
   level:
-    # 设置com.zhangblue.sample.cache.mapper包下的日志打印级别为debug
+    # 设置com.zhangblue.simple.cache.mapper包下的日志打印级别为debug
     com.zhangblue.sample.cache.mapper: debug
 
 

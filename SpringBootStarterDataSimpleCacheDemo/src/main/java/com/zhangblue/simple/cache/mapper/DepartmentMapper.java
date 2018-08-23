@@ -1,4 +1,4 @@
-package com.zhangblue.sample.cache.mapper;
+package com.zhangblue.simple.cache.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 

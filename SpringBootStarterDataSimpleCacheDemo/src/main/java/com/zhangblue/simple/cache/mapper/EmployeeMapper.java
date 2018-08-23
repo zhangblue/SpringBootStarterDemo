@@ -1,6 +1,6 @@
-package com.zhangblue.sample.cache.mapper;
+package com.zhangblue.simple.cache.mapper;
 
-import com.zhangblue.sample.cache.bean.Employee;
+import com.zhangblue.simple.cache.bean.Employee;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
