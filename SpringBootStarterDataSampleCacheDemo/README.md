@@ -79,7 +79,7 @@ logging:
 - `@CachePut(key = "#result.id")` : 更新缓存。方法肯定会被执行，执行后的结果更新cache。`key = "#result.id"`表示使用返回值对象中的id字段作为缓存的key
 - `@CacheEvict`：清除缓存
  - `beforeInvocation`：表示是在调用方法前清除缓存，还是方法执行后才清除缓存。
--`@Caching`：定义复杂的缓存机制。可以自定义组合缓存。 
+- `@Caching`：定义复杂的缓存机制。可以自定义组合缓存。 
 
 
 
