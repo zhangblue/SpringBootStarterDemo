@@ -36,10 +36,30 @@ spring:
       uris: http://172.16.18.41:9200
 ```
 
+2. 使用spring-data-elasticsearch模块
+spring-data-elasticsearch操作es有两种方式。一种为`lasticsearchRepositor`，一种为`ElasticsearchTemplate`
 
-2. 使用ElasticsearchRepositor
-此方法类似与JPA，可自定义查询方法，自定义查询方法需要满足一下规则
-自定义查询函数名称规范：[https://docs.spring.io/spring-data/elasticsearch/docs/3.0.9.RELEASE/reference/html/#elasticsearch.query-methods](https://docs.spring.io/spring-data/elasticsearch/docs/3.0.9.RELEASE/reference/html/#elasticsearch.query-methods)
+- `lasticsearchRepositor`方法类似与JPA，可自定义查询方法，自定义查询方法需要满足一下规则
+  - 自定义查询函数名称规范：[https://docs.spring.io/spring-data/elasticsearch/docs/3.0.9.RELEASE/reference/html/#elasticsearch.query-methods](https://docs.spring.io/spring-data/elasticsearch/docs/3.0.9.RELEASE/reference/html/#elasticsearch.query-methods)
 
-3. 使用ElasticsearchTemplate方式 
+
+- 使用`ElasticsearchTemplate`方式。此中防止直接操作elasticsearch API。
+
+
+```yaml
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-elasticsearch
+      cluster-nodes: 172.16.18.41:9300
+```
+引入模块
+```xml
+  <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-elasticsearch</artifactId>
+    </dependency>
+
+```
+
 
