@@ -3,14 +3,15 @@
 
 # 构建方式
 - 所有模块都使用maven方式构建。
-- 所有模块都使用的SpringBoot版本`1.5.9.RELEASE`进行构建。
+- 所有模块都使用的SpringBoot版本`2.0.4.RELEASE`进行构建(当前发布的稳定版本)。
 
 ```xml
 <parent>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-parent</artifactId>
-  <version>1.5.9.RELEASE</version>
-</parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.4.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
 ```
 
 # 包含内容

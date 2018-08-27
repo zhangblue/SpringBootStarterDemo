@@ -1,0 +1,12 @@
+# 使用 jest 配置文件
+#spring:
+#  elasticsearch:
+#    jest:
+#      uris: http://172.16.36.134:9200
+
+# 使用 spring-data-elasticsearch 配置文件
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-elasticsearch
+      cluster-nodes: 172.16.18.41:9300
