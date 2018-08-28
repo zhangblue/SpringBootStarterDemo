@@ -18,13 +18,13 @@
       <artifactId>spring-data-elasticsearch</artifactId>
     </dependency>
 
-    <!-- 使用jest模块的方式连接es
+    <!-- 使用jest模块的方式连接es-->
     <dependency>
       <groupId>io.searchbox</groupId>
       <artifactId>jest</artifactId>
       <version>6.3.0</version>
     </dependency>
--->
+
 
     <!--引入web模块-->
     <dependency>
