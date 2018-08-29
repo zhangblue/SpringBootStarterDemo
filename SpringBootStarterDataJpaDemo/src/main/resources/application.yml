@@ -1,11 +1,11 @@
 spring:
   datasource:
     # 数据库连接地址
-    url: jdbc:postgresql://172.16.36.134:5432/zhangdi_test
+    url: jdbc:postgresql://172.16.18.240:5432/zhangdi_test
     # 数据库驱动
     driver-class-name: org.postgresql.Driver
     # 数据库用户
-    username: bangcle_pg
+    username: dizhang
   jpa:
     hibernate:
       # 更新或者创建数据表

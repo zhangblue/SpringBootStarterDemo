@@ -41,7 +41,7 @@ SpringBoot Redis的操作
 spring:
   redis:
     # 设置redis地址
-    host: 172.16.36.134
+    host: 172.16.18.240
     # 设置redis端口
     port: 6379
     # 设置默认连接的数据库

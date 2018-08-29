@@ -52,13 +52,13 @@
 ```yaml
 spring:
   redis:
-    host: 172.16.36.134
+    host: 172.16.18.240
     port: 6379
     database: 1
   datasource:
-    url: jdbc:postgresql://172.16.36.134:5432/zhangdi_test
+    url: jdbc:postgresql://172.16.18.240:5432/zhangdi_test
     driver-class-name: org.postgresql.Driver
-    username: bangcle_pg
+    username: dizhang
 
 mybatis:
   configuration:

@@ -2,7 +2,7 @@
 #spring:
 #  elasticsearch:
 #    jest:
-#      uris: http://172.16.36.134:9200
+#      uris: http://172.16.18.240:9200
 
 # 使用 spring-data-elasticsearch 配置文件
 spring:
