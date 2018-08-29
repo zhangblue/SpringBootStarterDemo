@@ -1,11 +1,12 @@
 spring:
   datasource:
     # 数据库连接地址
-    url: jdbc:postgresql://172.16.18.240:5432/zhangdi_test
+    url: jdbc:postgresql://172.16.18.240:5432/pg
     # 数据库连接驱动
     driver-class-name: org.postgresql.Driver
     # 数据库用户名
-    username: dizhang
+    username: pg
+    password: 123456
 
 mybatis:
   configuration:

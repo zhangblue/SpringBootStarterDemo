@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -39,16 +38,6 @@ public class SpringBootRedisApplicationTest {
   @Test
   public void testMap() {
     stringRedisTemplate.opsForValue().set("key1", "value1", 10, TimeUnit.SECONDS);
-  }
-
-  /**
-   * 改变redis连接的库编号
-   */
-  @Test
-  public void testSelectDatabase() {
-    JedisConnectionFactory jedisConnectionFactory = (JedisConnectionFactory) stringRedisTemplate.getConnectionFactory();
-    jedisConnectionFactory.setDatabase(2);
-    stringRedisTemplate.setConnectionFactory(jedisConnectionFactory);
   }
 
 }

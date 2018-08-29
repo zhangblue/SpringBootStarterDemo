@@ -2,11 +2,12 @@ spring:
   redis:
     host: 172.16.18.240
     port: 6379
-    database: 1
+    database: 0
   datasource:
-    url: jdbc:postgresql://172.16.18.240:5432/zhangdi_test
+    url: jdbc:postgresql://172.16.18.240:5432/pg
     driver-class-name: org.postgresql.Driver
-    username: dizhang
+    username: pg
+    password: 123456
 
 mybatis:
   configuration:
